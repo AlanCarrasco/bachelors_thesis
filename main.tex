@@ -1,0 +1,125 @@
+\documentclass[letterpaper,12pt,oneside]{book}
+%\usepackage[a4paper,includeall,bindingoffset=0cm,margin=2cm,marginparsep=0cm,marginparwidth=0cm]{geometry}
+\usepackage[top=1in, left=1in, right=1in, bottom=1in]{geometry}
+\usepackage{bachelorstitlepageUNAM}
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{graphicx}
+\usepackage{tikz} 
+\usepackage{tocloft}
+\graphicspath{{./figs/}}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{cite}
+
+%\usepackage[round]{natbib}
+
+\renewcommand\cftsecpresnum{\S}
+\renewcommand\cftsubsecpresnum{\S}   
+
+
+\begin{document}
+%------------------------------
+
+    \begin{titlepage}
+        \thispagestyle{empty}
+        \begin{minipage}[c][0.17\textheight][c]{0.25\textwidth}
+            \begin{center}
+                \includegraphics[width=3.3cm]{figs/logos/escudounam_negro.jpg}
+            \end{center}
+        \end{minipage}
+        \begin{minipage}[c][0.195\textheight][t]{0.75\textwidth}
+            \begin{center}
+                \vspace{0.3cm}
+                \textsc{\large Universidad Nacional Aut\'onoma de M\'exico}\\[0.5cm]
+                \vspace{0.3cm}
+                \hrule height2.5pt
+                \vspace{.2cm}
+                \hrule height1pt
+                \vspace{.8cm}
+                \textsc{Facultad de Ingeniería}\\[0.5cm] %
+            \end{center}
+        \end{minipage}
+
+        \begin{minipage}[c][0.81\textheight][t]{0.25\textwidth}
+            \vspace*{5mm}
+            \begin{center}
+                \hskip2.0mm
+                \vrule width1pt height13cm 
+                \vspace{5mm}
+                \hskip2pt
+                \vrule width2.5pt height13cm
+                \hskip2mm
+                \vrule width1pt height13cm \\
+                \vspace{5mm}
+                \includegraphics[height=4cm]{figs/logos/escudofi_negro.jpg}
+            \end{center}
+        \end{minipage}
+        \begin{minipage}[c][0.81\textheight][t]{0.75\textwidth}
+            \begin{center}
+                \vspace{1cm}
+
+                \textbf{\large\scshape Diseño e Implementación de Sensor de Nivel Basado en Capacitancia para el Cohete Híbrido Sierra I}\\[.2in]
+
+                \vspace{2cm}            
+
+                \textsc{\LARGE T\hspace{1.5cm}E\hspace{1.5cm}S\hspace{1.5cm}I\hspace{1.5cm}S}\\[0.5cm]
+                \textsc{\large que para obtener el título de:}\\[0.5cm]
+                \textsc{\large Ingeniero en Eléctrica Electrónica}\\[0.5cm]
+                \textsc{\large presenta:}\\[0.5cm]
+                \textsc{\large {Alan Michel Carrasco Meza}}\\[2cm]          
+
+                \vspace{0.5cm}
+
+                {\large\scshape Asesor:\\[0.3cm] {Dr. Roberto Giovanni Ramírez Chavarría}}\\[.2in]
+
+                \vspace{0.5cm}
+
+                \large{Ciudad de México, }{2026}
+            \end{center}
+        \end{minipage}
+    \end{titlepage}
+
+
+
+%---------------------------------
+\frontmatter
+%\maketitle
+\chapter*{}
+\begin{flushright}%
+  \emph{Dedicatoria ...}
+  
+  \thispagestyle{empty}
+\end{flushright}
+
+\chapter{Agradecimientos}
+\spacing{1.5}%\doublespacing
+
+\chapter{Notación}
+
+\tableofcontents
+\listoffigures
+
+    
+\mainmatter
+
+\input{cap1_intro.tex}
+% \input{cap2_marco.tex}
+% \input{cap3_metodologia.tex}
+% \input{cap4_resultados.tex}
+% \input{cap5_discusion.tex}
+% \input{cap6_conclusiones.tex}
+
+% Bibliografia
+% Anexos
+
+\chapter*{Referencias}
+\bibliographystyle{IEEEtran}
+\bibliography{referencias}
+
+\backmatter %@sglvgdor
+
+
+\end{document}
