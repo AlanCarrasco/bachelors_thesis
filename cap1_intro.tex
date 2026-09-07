@@ -3,29 +3,57 @@
 \section{Planteamiento del problema}
 % Qué es la cohetería experimental
 
-La cohetería experimental es un campo de desarrollo amateur que consiste en el diseño y fabricación de vehículos no tripulados impulsados por un motor de propelente sólido, líquido o híbrido [cita de definición], con el propósito de poner a prueba los conocimientos teóricos de física, química e incluso electrónica. Cabe resaltar que el término "amateur" no resta relevancia ni seriedad a la actividad, puesto que, como se verá más adelante, el funcionamiento de estos vehículos requiere una base teórica sólida y experiencia para obtener resultados y no comprometer la integridad física de los participantes. Por otro lado, en México existen leyes que regulan esta actividad, dado que el espacio aereo mexicano es materia de seguridad nacional [referencia sobre espacio aereo mexicano]. Además, dado que los cohetes pueden utilizarse como dispositivos con fines bélicos, hay compuestos (el que estaba utilizando Matías) y tecnologías (como el thrust vector[pie de página sobre lo que es thrust vector]) que están reguladas o directamente son ilegales [cita donde el thrust vector es ilegal].
+La cohetería experimental es un campo de desarrollo amateur que consiste en el diseño y fabricación de vehículos no tripulados impulsados por un motor de propelente sólido, líquido o híbrido \hl{[cita de definición]}, con el propósito de poner a prueba los conocimientos teóricos de física, química e incluso electrónica. Cabe resaltar que el término "amateur" no resta relevancia ni seriedad a la actividad, puesto que, como se verá más adelante, el funcionamiento de estos vehículos requiere una base teórica sólida y experiencia para obtener resultados y resguardar la integridad física de los participantes. Por otro lado, en México existen leyes que regulan esta actividad, dado que el espacio aereo mexicano es materia de seguridad nacional \hl{[referencia sobre espacio aereo mexicano]}. Además, dado que los cohetes pueden utilizarse como dispositivos con fines bélicos, hay compuestos \hl{(el que estaba utilizando Matías)} y tecnologías \hl{(como el thrust vector[pie de página sobre lo que es thrust vector])} que están reguladas o directamente son ilegales \hl{[cita donde el thrust vector es ilegal]}.
 
-- Qué es la cohetería experimental
-- Qué elementos componen a un cohete experimental?
-- Qué tipo de cohete experimental vamos a tratar y por qué (FAR OUT)?
-- Por qué nos interesa conocer el nivel de este tipo de cohetes?
-- Cual es el problema de medir nivel en este tipo de tanques?
-- Qué soluciones existen?
-- Que solución propuse yo?
+% Qué elementos componen a un cohete experimental?
 
-% Desde el 2021, la cohetería experimental en México ha cobrado una particular interés en comunidades estudiantiles de ciencias e ingeniería. Universidades como el Instituto Politécnico Nacional (IPN), Universidad Autónoma de Baja California (UABC), Universidad de Guadalajara (UDG) y la Universidad Nacional Autónoma de México (UNAM) cuentan con sus propias asociasiones estudiantiles dedicadas al desarrollo de cohetes experimentales y participan de forma activa en competencias nacionales e internacionales. En el caso de la UNAM, la primera agrupación  
+Existen diferentes categorías de cohetes experimentales. De acuerdo con el NFPA 1127 \hl{[Insertar cita para categorías de cohetes]}, los cohetes experimentales se distinguen por el tipo de propulsión que tienen: sólida, híbrida y líquida. Dentro de estas categorías, se pueden categorizar por la cantidad de empuje que producen \hl{(explicar de las categorías A, B, C, D, etc... y los empujes que producen)}.
+
+Eso es en cuanto a la propulsión respecta. Ahora, sin un orden en particular, los elementos que componen a un cohete son los siguientes.
+\begin{itemize}
+\item Nariz
+\item Carga útil
+\item Computadora de vuelo
+\item Telemetría
+\item Instrumentación
+\item Fuselaje
+\item Coples
+\item Recuperación
+\item Propelente
+\item Tanque
+\item Motor
+\item Aletas
+\item Tobera
+\end{itemize}
+
+% Qué tipo de cohete experimental vamos a tratar y por qué (FAR OUT)?
+Dicho lo anterior, en este trabajo se consideró un cohete híbrido con propelente líquido de N$_2$O y sólido de parafina con apogeo de 3 kilómetros. El diseño y manufactura de cada elemento del cohete se llevó a cabo por el equipo Propulsión UNAM para competir en la categoría \hl{XX} de 10k pies de Friends of Amateur Rocketry Oxidizers Uninhibited Tournament, mejor conocido como FAR OUT. Esta competencia se llevó a cabo del 27 de mayo al 1 de junio del 2026.
+
+Propulsión UNAM es una asociación estudiantil de la Facultad de Ingeniería fundada en el 2021 cuyo propósito es competir en torneos nacionales e internacionales con la finalidad de poner a prueba sus proyectos y formar capital humano para el sector industrial mexicano. Han participado en LASC, Spaceport, FAR OUT y Enmice consiguiendo \hl{tales y tales puestos}, respectivamente. 
+
+% Por qué nos interesa conocer el nivel de este tipo de cohetes?
+Como se mencionó anteriormente, uno de los elementos principales de los cohetes híbridos es el tanque en donde se almacena el oxidante, conocer su nivel con exactitud es de suma importancia para no depender de modelos termodinámicos limitados \hl{(investigar cuáles son esos modelos termodinámicos)} o de galgas instaladas en el riel de lanzamiento cuya calibración caduca rápidamente. Además, un conocimiento exacto del nivel contribuye a la caracterización del motor, entender la relación entre el volumen (y masa) de oxidante con el empuje entregado, al igual que el tiempo de quemado \hl{(sería bueno conseguir unas ecuaciones para esto)}.
+
+% Cual es el problema de medir nivel en este tipo de tanques?\\
+Uno de los principales retos que se enfrentan al conocer el nivel dentro de un tanque de oxidante es que el tanque se encuentra presurizado entre 1000 y 1500 PSI, por lo que es necesario un sensor que soporte esas condiciones de presión. Por otro lado, es importante tomar en cuenta que el contenido del tanque es bifásico, por lo que idealmente se debería poder medir la aportación de cada una de las fases. Finalmente, se necesita un sensor que sea lo suficientemente pequeño para no competir por el espacio con otros sistemas críticos, como las válvulas de llenado, de purga y \hl{(insertar la válvula de la tapa que me hace falta con la imagen de la tapa)}.
 
 \section{Justificación}
-- Por qué es relevante este proyecto?
-- Por qué desarrollar un sensor más para esta aplicación tan específica
-- Qué beneficios tiene?
-- Por qué vale la pena?
-- Para qué otras cosas nos puede servir la capacitancia?
-- Cómo nos ayuda este proyecto a dominar la capacitancia?
+%- Por qué es relevante este proyecto?
+\begin{itemize}
+\item Este proyecto es relevante por varios motivos. El principal es que los sensores de nivel industriales son excesivamente caros (alrededor de 2k USD), obviamente porque son muy buenos y han sido probados extensivamente, pero no siempre se necesita un sensor tope de gama, particularmente no cuando tu aplicación es un cohete que puede estrellarse.
+\item Otra de las razones es que el tanque se encuentra a presión y poder resolver el problema de pasar elementos del ambiente al interior del tanque sin fugas abre las puertas a desarrollar sensores intratanque no solo de nivel, sino también de temperatura y presion.
+\item Por otro lado, las dimensiones del sensor son muy reducidas y están pensadas para minimizar el uso de área al mismo tiempo que se aprovechó al máximo los periféricos del microcontrolador utilizado.
+\item También se quizo probar la compatibilidad de algunos materiales utilizados. Por ejemplo, la resina epóxica de JB Weld, el aluminio 6061 y el cobre esmaltado.
+\item Por último, este sensor empuja la barrera de la categoría "Student Researched and Developed" (SRAD), pues incluso en esta categoría la mayoría de equipos compra los sensores para la instrumentación de sus cohetes. Como se mencionó anteriormente, el desarrollo de este sensor abre la puerta al desarrollo de sensores propios para bajar los costos y tener control completo sobre las capacidades de los dispositivos.
+\end{itemize}
 
 \section{Objetivos}
-\subsection{Objetivos generales}
-\subsection{Objetivos específicos}
+\begin{itemize}
+\item Diseñar un sensor de nivel basado en capacitancia para medir el nivel de N$_2$O en el tanque de oxidante del cohete híbrido experimental de alta potencial Sierra I.
+\item Caracterizar la incertidumbre, varianza y ruido del sensor.
+\item Obtener las curvas de carga y descarga del tanque durante las pruebas estáticas y previo al lanzamiento.
+\item Identificar áreas de oportunidad para el desarrollo de sensores SRAD posteriores
+\end{itemize}
 
 
 
