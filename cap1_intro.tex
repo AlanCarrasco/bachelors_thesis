@@ -12,10 +12,24 @@ Con lo anterior, para llevar a cabo el diseño, manufactura, prueba y vuelo de l
 % Bro vas empezando, cierra el papoi.
 
 \subsection{El proyecto Sierra I}
-El proyecto Sierra I consistió en el diseño, manufactura, prueba y lanzamiento de un cohete híbrido experimental de alta potencia. Se desarrolló a cargo de la asociación estudiantil Propulsión UNAM para competir en FAR-OUT\footnote{El nombre \textit{FAR-OUT} son las siglas de Friends of Amateur Rocketry Oxidizers Uninhibited Tournament, que en español significa Torneo de Oxidantes Desinhibidos de los Amigos de la Cohetería Experimental. Cabe mencionar que FAR es la empresa educativa sin fines de lucro que organiza el torneo, pero se coloca al principio del nombre como un juego de palabras, pues FAR-OUT significa \textit{muy lejos} en inglés.} en la categoría A, cuyo rango de apogeo se encuentra desde los 10.000 hasta los 15.000 pies (3--4.5 kilómetros), la cual está pensada para estudiantes que nunca han volado o tienen experiencia limitada con motores híbridos, ya sean SRAD o COTS.
+El proyecto Sierra I consistió en el diseño, manufactura, prueba y lanzamiento de un cohete híbrido experimental de alta potencia. Se desarrolló a cargo de la asociación estudiantil Propulsión UNAM para competir en FAR-OUT\footnote{El nombre \textit{FAR-OUT} son las siglas de Friends of Amateur Rocketry Oxidizers Uninhibited Tournament, que en español significa Torneo de Oxidantes Desinhibidos de los Amigos de la Cohetería Experimental. Cabe mencionar que FAR es la empresa educativa sin fines de lucro que organiza el torneo, pero se coloca al principio del nombre como un juego de palabras, pues FAR-OUT significa \textit{muy lejos} en inglés.} en la categoría A, cuyo rango de apogeo se encuentra desde los 10,000 hasta los 15,000 pies (3--4.5 kilómetros), la cual está pensada para estudiantes que nunca han volado o tienen experiencia limitada con motores híbridos, ya sean SRAD o COTS\cite[p.67]{farout_r&r}. Participar en esta categoría no es para menos, un cohete híbrido es un reto prominente para cualquier equipo con experiencia en motores sólidos.
 
-% A partir de aquí ya empieza a meterte en la carnita del cohete. Qué significa que sea híbrido? Qué es un motor híbrido? Qué compuestos van a usar para el líquido y para el sólido? 
-% No Hables de las categorías de motores ni te metas en mucho detalle de cosas que no conoces y realmente no importan. Mientras más rápido empecemos a hablar de electrónica mejor. Ve al grano!
+La complejidad de un cohete con propulsión híbrida radica en que el motor genera un impulso combinado a partir de un oxidante en fase líquida y un propelente en fase sólida. El oxidante se contiene en un tanque capaz de soportar altas presiones y que debe contar con válvulas de llenado, alivio, purgado y aborto. Por otro lado, el NFPA 1127 especifica que un cohete de alta potencia es aquel que cumple al menos una de las siguientes condiciones.
+\begin{enumerate}
+\item Está propulsado por uno o más motores de alta potencia.
+\item El impulso total combinado debe ser superior a 320 N$\cdot$s.
+\item La masa combinada de los propelentes debe ser mayor a 125 gramos.
+\item El cohete tiene un peso total antes de desapegue superior a los 1.5 kilogramos. 
+\end{enumerate}
+
+Para el caso del Sierra I, el sistema de propulsión empleó óxido nitroso (N$_2$O) como oxidante y parafina como propelente. El tanque para el oxidante se diseñó para soportar una presión máxima de hasta 1,450 PSI ($\approx 100$ atmósferas) considerando un factor de seguridad de 1.5. Además, el motor se proyectó para entregar un impulso total entre 11,916 y 14,067.27 N$\cdot$s, lo que dio como resultado un cohete con masa total de \hl{14 kilogramos}. Con lo anterior, es seguro afirmar que el Sierra I se trata de un cohete híbrido de alta potencia, pues no solo satisface con una de las condiciones del NFPA 1127, sino que excede holgadamente cada uno de los umbrales establecidos.
+% FAH! Qué rico me papié al NFPA 1127
+
+\hl{Aquí estaría bueno agregar una figura comparativa de cohete sólido (komodo) contra cohete híbrido (Sierra I).}
+
+\hl{También estaría bien agregar un diagrama con los componentes del cohete.}
+
+% Muy bien! Creo que solo faltan las fotos, a lo mejor una descripción de las imágenes y tomar en cuenta lo que escribí aquí abajito para terminar de cerrar la introducción o reacomodarla para dar más contexto.
  
 Eso es en cuanto a la propulsión respecta. Ahora, sin un orden en particular, los elementos que componen a un cohete son los siguientes.
 \begin{itemize}
@@ -33,11 +47,6 @@ Eso es en cuanto a la propulsión respecta. Ahora, sin un orden en particular, l
 \item Aletas
 \item Tobera
 \end{itemize}
-
-% Qué tipo de cohete experimental vamos a tratar y por qué (FAR OUT)?
-Dicho lo anterior, en este trabajo se consideró un cohete híbrido con propelente líquido de N$_2$O y sólido de parafina con apogeo de 3 kilómetros. El diseño y manufactura de cada elemento del cohete se llevó a cabo por el equipo Propulsión UNAM para competir en la categoría \hl{XX} de 10k pies de Friends of Amateur Rocketry Oxidizers Uninhibited Tournament, mejor conocido como FAR-OUT. Esta competencia se llevó a cabo del 27 de mayo al 1 de junio del 2026.
-
-Propulsión UNAM es una asociación estudiantil de la Facultad de Ingeniería fundada en el 2021 cuyo propósito es competir en torneos nacionales e internacionales con la finalidad de poner a prueba sus proyectos y formar capital humano para el sector industrial mexicano. Han participado en LASC, Spaceport, FAR-OUT y Enmice consiguiendo \hl{tales y tales puestos}, respectivamente. 
 
 % Por qué nos interesa conocer el nivel de este tipo de cohetes?
 Como se mencionó anteriormente, uno de los elementos principales de los cohetes híbridos es el tanque en donde se almacena el oxidante, conocer su nivel con exactitud es de suma importancia para no depender de modelos termodinámicos limitados \hl{(investigar cuáles son esos modelos termodinámicos)} o de galgas instaladas en el riel de lanzamiento cuya calibración caduca rápidamente. Además, un conocimiento exacto del nivel contribuye a la caracterización del motor, entender la relación entre el volumen (y masa) de oxidante con el empuje entregado, al igual que el tiempo de quemado \hl{(sería bueno conseguir unas ecuaciones para esto)}.
