@@ -34,34 +34,62 @@ Para el caso del Sierra I, el sistema de propulsión empleó óxido nitroso (N$_
 \end{figure} 
 
 
-\hl{Aquí estaría bueno agregar una figura comparativa de cohete sólido (komodo) contra cohete híbrido (Sierra I).}
+% \hl{Aquí estaría bueno agregar una figura comparativa de cohete sólido (komodo) contra cohete híbrido (Sierra I).}
+% Realmente vale la pena hacer la comparativa? Yo creo que solo es importante hablar del Sierra de momento.
 
-\hl{También estaría bien agregar un diagrama con los componentes del cohete.}
+En la figura anterior (\ref{fig:cross_section_sierraI}) se muestra la sección transversal del cohete híbrido Sierra I y sus componentes principales. A continuación se describen de forma sucinta cada uno de estos elementos.
 
-% Muy bien! Creo que solo faltan las fotos, a lo mejor una descripción de las imágenes y tomar en cuenta lo que escribí aquí abajito para terminar de cerrar la introducción o reacomodarla para dar más contexto.
- 
-Eso es en cuanto a la propulsión respecta. Ahora, sin un orden en particular, los elementos que componen a un cohete son los siguientes.
 \begin{itemize}
-\item Nariz
-\item Carga útil
-\item Computadora de vuelo
-\item Telemetría
-\item Instrumentación
-\item Fuselaje
-\item Coples
-\item Recuperación
-\item Propelente
-\item Tanque
-\item Motor
-\item Aletas
-\item Tobera
+\item \textbf{Carga útil:}  Es el conenido adicional en el cohete que no satisface una necesidad crítica para el vuelo y usualmente se aprovecha para llevar a cabo experimentos. En el caso del Sierra I, la carga útil consistió en un sistema de amortiguamiento para mantener huevos intactos durante el vuelo.
+
+\item \textbf{Paracaídas:} Es el dispositivo que se encarga de reducir la velocidad de caída libre del cohete una vez se haya alcanzado el apogeo. Este se libera mediante el sistema de recuperación.
+
+\item \textbf{Sistema de recuperación:} Es un sistema electromecánico que se encarga de liberar el paracaídas mediante cargas de CO$_2$ presurizado activados mediante una señal eléctrica de la computadora de vuelo.
+
+\item \textbf{Bahía de aviónica:} Contiene todos los sistemas electrónicos críticos para el cohete, tales como telecomunicaciones, antenas, GPS, computadora de vuelo, instrumentación y actuación.
+
+\item \textbf{Tanque de oxidante:} Como su nombre sugiere, es el contenedor en el que se carga el oxidante (N$_2$O en este caso), el cual se utiliza para llevar a cabo la combustión. Cuenta con un sistema intrincado de válvulas y sensores para poder monitorear y manipular el estado del tanque.
+
+\item \textbf{Válvula principal de oxidante:} Es la válvula que permite el paso del oxidante a la cámara de combustión. 
+\item \textbf{Cámara de combustión:} Es el espacio en el que se lleva a cabo la combustión entre el oxidante y el propelente. Está diseñada específicamente para soportar la presión y temperatura de la combustión.
+
+\item \textbf{Tobera:} Es la salida para los gases a alta presión de la cámara de combustión. Su geometría es crítica para aprovechar la presión de los gases y convertirla en impulso.
+
 \end{itemize}
 
+% Muy bien! Creo que solo faltan las fotos, a lo mejor una descripción de las imágenes y tomar en cuenta lo que escribí aquí abajito para terminar de cerrar la introducción o reacomodarla para dar más contexto.
+
+% =========== HASTA AQUÍ YA HEMOS TERMINADO =========== 
+% ================ WIP A CONTINUACIÓN ================= 
+
+
 % Por qué nos interesa conocer el nivel de este tipo de cohetes?
-Como se mencionó anteriormente, uno de los elementos principales de los cohetes híbridos es el tanque en donde se almacena el oxidante, conocer su nivel con exactitud es de suma importancia para no depender de modelos termodinámicos limitados \hl{(investigar cuáles son esos modelos termodinámicos)} o de galgas instaladas en el riel de lanzamiento cuya calibración caduca rápidamente. Además, un conocimiento exacto del nivel contribuye a la caracterización del motor, entender la relación entre el volumen (y masa) de oxidante con el empuje entregado, al igual que el tiempo de quemado \hl{(sería bueno conseguir unas ecuaciones para esto)}.
+Como se mencionó anteriormente, uno de los elementos principales de los cohetes híbridos es el tanque en donde se almacena el oxidante, conocer su nivel con exactitud es de suma importancia para no depender de modelos termodinámicos limitados (\hl{limitados cómo? (muy sensibles a deltas de T y P)}), como Peng-Robinson\cite{peng_robinson_model} o Span-Wagner\cite{span_wagner_nonpolar_model}, o de galgas instaladas en el riel de lanzamiento cuya calibración se deteriora rápidamente (\hl{Por qué esto es un problema? porqué se deteriora rápidamente?}). Además, un conocimiento exacto del nivel contribuye a la caracterización del motor, entender la relación entre el volumen (y masa) de oxidante con el empuje entregado, al igual que el tiempo de quemado \hl{(sería bueno conseguir unas ecuaciones y citas para esto)}.
 
 % Cual es el problema de medir nivel en este tipo de tanques?\\
 Uno de los principales retos que se enfrentan al conocer el nivel dentro de un tanque de oxidante es que el tanque se encuentra presurizado entre 1000 y 1500 PSI, por lo que es necesario un sensor que soporte esas condiciones de presión. Por otro lado, es importante tomar en cuenta que el contenido del tanque es bifásico, por lo que idealmente se debería poder medir la aportación de cada una de las fases. Finalmente, se necesita un sensor que sea lo suficientemente pequeño para no competir por el espacio con otros sistemas críticos, como las válvulas de llenado, de purga y \hl{(insertar la válvula de la tapa que me hace falta con la imagen de la tapa)}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Justificación}
 %- Por qué es relevante este proyecto?
